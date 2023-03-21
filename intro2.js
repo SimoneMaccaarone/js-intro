@@ -1,3 +1,4 @@
+
 console.log('intro2')
 
 let pippo=5;            // assegnare = mettere oggetto nella scatola (=)
@@ -37,4 +38,6 @@ let macchiNera = 12;
 console.log(macchiaNera);
 macchiNera = 27;
 console.log(macchiaNera);
+
+
 

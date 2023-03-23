@@ -92,8 +92,6 @@ function scriviNellaConsole(messaggio) {         //  ----- FUNZIONE IMPURA   ---
 }
 scriviNellaConsole('scemo chi legge');
 
-function duplicaDue(2)
-
 
 let pluto = 7;
 function doplicaPluto() {    // impura
@@ -142,4 +140,4 @@ console.log(elevazioneAPotenzaConDefault(3));
     3) scirvere una funzione che mi restituisca vero se è piu lunga di 10 caratteri alrimenti restituisca falsa
     4) scrivere una funzione pura che restituisca la scacchiera
     5) scrivere una funzione che dato un numero restituisca una strunga con la logica fizz buzz
-    6) scrivere una funzione che data una stringa restituisca una stringa composta solo dai caratteri dispari dell orginale 
+    6) scrivere una funzione che data una stringa restituisca una stringa composta solo dai caratteri dispari dell orginale*/

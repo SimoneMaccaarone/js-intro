@@ -116,28 +116,62 @@ function log(messaggio) {            //  esempio di FUNZIONE che abbrevia il com
 } */
 
 
-function elevazioneAPotenza(base, esponente){
-    if(esponente===undefined){
-        const risultato = base**2;
+function elevazioneAPotenza(base, esponente) {
+    if (esponente === undefined) {
+        const risultato = base ** 2;
         return risultato;
-    }else{
-        const risultato = base**esponente;
+    } else {
+        const risultato = base ** esponente;
         return risultato;
     }
 }
 
-function elevazioneAPotenzaConDefault(base,esponente=2){
-    const risultato = base**esponente;
+function elevazioneAPotenzaConDefault(base, esponente = 2) {
+    const risultato = base ** esponente;
     return risultato;
 }
 console.log(elevazioneAPotenzaConDefault(3));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//////////////////////////////////////////////
-//  esercizi
+//  LE FUNZIONI POSSONO USARE ALTRE FUNZIONI
 
-/*  1) scrivere una funzione che dato un numero se è positivo lo moltiplica per due se no NaN
-    2) scrivere una funzione che data una stringa restituisca la sua versione maiuscola
-    3) scirvere una funzione che mi restituisca vero se è piu lunga di 10 caratteri alrimenti restituisca falsa
-    4) scrivere una funzione pura che restituisca la scacchiera
-    5) scrivere una funzione che dato un numero restituisca una strunga con la logica fizz buzz
-    6) scrivere una funzione che data una stringa restituisca una stringa composta solo dai caratteri dispari dell orginale*/
+function doubleAndPow3(selectedNumber) {
+    // const double = selectedNumber * 2;
+    // const pow3 = double ** 3;
+    // return pow3;
+    //---------------------------------------
+    // const double = makeDouble(selectedNumber);
+    // const pow3= makePow3(double);
+    // return pow3;
+    //---------------------------------------
+    return makePow3(makeDouble(selectedNumber));
+}
+
+function makeDouble(selectedNumber){
+    return selectedNumber*2;
+}
+
+function makePow3(selectedNumber){
+    return selectedNumber**3;
+}
+
+console.log(doubleAndPow3(2));  //64
+console.log(doubleAndPow3(3));  //232
+
+
+function ifMoreThan10CharUpperCase(text){
+
+    function isMoreThan10CharInside(textToCheck){
+        return textToCheck.length>10;
+    }
+
+    if (isMoreThan10CharInside(text)){
+        return text.toUpperCase();
+    }else{
+        return text;
+    }
+}
+
+console.log(ifMoreThan10CharUpperCase('il mio cane reosa non è in forma'));
+//------------------------------------------------------------------------
+//  RICORSIONE

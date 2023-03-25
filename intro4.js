@@ -14,7 +14,7 @@ console.log(pippo); // [15, 3, 23, 34]
 console.log(pluto); // 100
 console.log(paperino); // 21
 */
-/*
+
 pippo.unshift(200); // [200, 15, 3, 23, 34, 21]
 
 const paperone = pippo.shift(); [15, 3, 23, 34, 21]
@@ -23,7 +23,7 @@ const paperina = pippo.shift(); [3, 23, 34, 21]
 console.log(pippo);     //[3, 23, 34, 21]
 console.log(paperone);  //200
 console.log(paperina);  //15
-*/
+
 
 // console.log(pippo);
 // pippo.pop();
@@ -48,24 +48,28 @@ for (let i = 0; i < arrayOfStrings.length; i++) {
 
 // 1) scrivere una funzione che prende come parametro un array di numeri e fa console.log dei numeri con la logica fizzbuzz
 
-const scatola = [3, 15, 10, 8, 4];
+// const scatola = [3, 15, 10, 8, 4];
 
-function printArrayFizzBuzzLogic(arrayOfNumber){
-    if (scatola % 3 === 0 && scatola % 5 === 0) {
-        console.log('FizzBuzz' );
-    } else if (scatola % 5 === 0) {
-        console.log('Buzz');
-    } else if (scatola % 3 === 0) {
-        console.log('Fizz')
-    } else {
-        console.log(scatola);
+// function printArrayFizzBuzzLogic(arrayOfNumber){
+// for (let i = 0; i < printArrayFizzBuzzLogic.length; i++) {
+//     const element = printArrayFizzBuzzLogic[i];
+
+//     if (arrayOfNumber % 3 === 0 && arrayOfNumber % 5 === 0) {
+//         console.log('FizzBuzz' );
+//     } else if (arrayOfNumber % 5 === 0) {
+//         console.log('Buzz');
+//     } else if (arrayOfNumber % 3 === 0) {
+//         console.log('Fizz')
+//     } else {
+//         console.log(arrayOfNumber);
  
-    } return scatola;
-}
+//     } return arrayOfNumber;
+// }
+// }
 
-printArrayFizzBuzzLogic(scatola);
-//fizz
-//fizzbuzz
-//buzz
-//8
-//4
+// printArrayFizzBuzzLogic(scatola);
+// //fizz
+// //fizzbuzz
+// //buzz
+// //8
+// //4

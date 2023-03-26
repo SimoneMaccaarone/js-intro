@@ -74,20 +74,28 @@ function printShorterThan5Chars(arrayOfStrings) {
 
 
 function lengthOfTextWithoutSpaces(text) {
-    let textNoSpace += text.length;
-    console.log textNoSpace;
+    let str=text.replace(/\s/g,'');
+    let stringNumb = str
+    stringNumb= stringNumb.length;
+    return stringNumb;
 
 }
 
-console.log(lengthOfTextWithoutSpaces('il nano enorme')) //12
+console.log(lengthOfTextWithoutSpaces(' il nano enorme ')) //12
 
 
 
 //5) scrivere una funzione che prende come parametro una stringa e restituisce il numero degli spazi
 
 
-// function countSpaces(text) {
-    
-// }
+function countSpaces(text) {
+    let spaces=0;
+    let text=text.split(' ').join(spaces);
+    spaces+=spaces.length;
+    return spaces;
 
-// console.log(countSpaces('il nano enorme')) //2
+
+
+}
+
+console.log(countSpaces('il nano enorme')) //2

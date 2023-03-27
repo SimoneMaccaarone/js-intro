@@ -188,7 +188,7 @@ console.log(paperino); // 21
 
 //---------------------------------------------------------------------------------------------
 //FILTER
-//1) scrivere una funzioneche dato un array  di numeri restituisce un array con i numeri maggiori o uguali a 0
+// 1) scrivere una funzioneche dato un array  di numeri restituisce un array con i numeri maggiori o uguali a 0
 
 // const arrayNumbers = [100, -23, 0, -234, 1001, 1, 34, -12];
 
@@ -205,10 +205,10 @@ console.log(paperino); // 21
 // }
 // console.log(filterNegative(arraynumber)) // [100, 0, 1001, 1, 34]
 
-//MAP
-//2) SCRIVERE UNA FIMZIONE CHE DATO IM ARRAY DI NUMERI LI MOLTIPLICA TUTTI  PER DUE
+// MAP
+// 2) SCRIVERE UNA FIMZIONE CHE DATO IM ARRAY DI NUMERI LI MOLTIPLICA TUTTI  PER DUE
 
-// const arrayNumbers = [100, -23, 0, -234, 1001, 1, 34, -12];
+// const arrayNumbers1 = [100, -23, 0, -234, 1001, 1, 34, -12];
 
 // function multiplyAllElementsby2(array){
 //     const tempArray=[];
@@ -243,54 +243,126 @@ console.log(paperino); // 21
 //          27/03 ESERCIZI DA FARE 
 // 1) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI NUMERI E RESTITUISCE UN ARRAY DI STRINGHE IN LOGICA FIZZ BUZZ   (ARRAY DI STRINGHE)
 
-const numbers1 = [3, 5, 15, 8, 12, 2];
-
+const numbers = [3, 5, 15, 8, 12, 2];
 function convertArrayInFizzBuzz(array) {
+
     let tempArray = []
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
 
         if (element % 3 === 0 && element % 5 === 0) {
-            console.log('FizzBuzz');
+            tempArray.push('FizzBuzz')
         } else if (element % 5 === 0) {
-            console.log('Buzz');                //cambiare console log
+            tempArray.push('Buzz');
+
         } else if (element % 3 === 0) {
-            console.log('Fizz')
+            tempArray.push('Fizz');
         } else {
-            console.log(element);
+            tempArray.push(element);
         }
     }
-return tempArray;
+    return tempArray;
 }
-console.log(convertArrayInFizzBuzz(numbers1)) //['Fizz','buzz', 'fizzbuzz', '8', 'fizz','2']
+console.log('ESERCIZIO 1', convertArrayInFizzBuzz(numbers)) //['Fizz','buzz', 'fizzbuzz', '8', 'fizz','2']
 
 
 
+// 2) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI NUMERI E RESTITUISCE UN ARRAY DI NUMERI IN CUI I POSITIVI SONO TRASFORMATI IN NEGATIVI E VICEVERSA
+
+const numbers1 = [-3, 5, 15, -8, 12, 2, 0];
+function invertElements(array) {
+
+    let tempArray1 = [];
+    let tempNumber1 = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        tempNumber1 = element * -1;
+        tempArray1.push(tempNumber1);
+    }
+    return tempArray1;
+}
+console.log('ESERCIZIO 2', invertElements(numbers1))   //[3, -5, -15, 8, -12, -2, 0]
 
 
-// 2) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI NUMERI E RESTITUISCE UN ARRAY DI NUMERI IN CUI I POSITIVI SONO TRASFORMATI IN NEGATIVI E VICEVERSA
+// 3) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI STRINGHE CON LA LUNGHEZZA DELLE STRINGHE
 
-// const numbers2 = [3, 5, 15, 8, 12, 2];
+const strings = ['pippo', 'pluto', 'qui'];
 
-// function invertElements(array) {
+function lengthOfElements(array) {
+    let tempArray = [];
+    let tempStings = ''
 
-// }
-// console.log(numbers2)
-// 3) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI STRINGHE CON LA LUNGHEZZA DELLE STRINGHE
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
 
+        tempStings = element.length;
+        tempArray.push(tempStings)
+    }
+    return tempArray;
+}
 
-// 4) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI STRINGHE E RESTITUISCE SOLO QUELLE CHE CONTENGONO LA LETTERA Z
-
-
-// 5) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI NUMERI E RESTITUISCE TUTTI I NUMERI PARI
-
-
-// 6) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI STRINGHE E RESTITUISCE UNA STRINGA COMPOSTA DALLE INIZIALI
-
-
-// 7) SCRIVERE UNA FUNZIONE CHE PRENDE OM INPUT UN ARRAY DI NUMERI E RESTITUISCE IL MAGGIORE
+console.log('ESERCIZIO 3', lengthOfElements(strings)) //[5, 5, 3]
 
 
+// 4) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI STRINGHE E RESTITUISCE SOLO QUELLE CHE CONTENGONO LA LETTERA Z
+
+const strings2 = ['pippo', 'pluto', 'qui', 'zapotec', 'zorro', 'zanzara'];
+
+function onlyElementsWithZ(array) {
+    let tempArray = [];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (!element.indexOf('z')) {
+            tempArray.push(element);
+        }
+    }
+    return tempArray;
+}
+console.log('ESERCIZIO 4', onlyElementsWithZ(strings2)) //['zapotec']
+
+
+// 5) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI NUMERI E RESTITUISCE TUTTI I NUMERI PARI
+
+const numbers2 = [-3, 5, 15, -8, 12, 2, 0];
+
+function onlyEven(array) {
+    let tempArray = []
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element % 2 === 0){
+            tempArray.push(element);
+        }
+    }
+    return tempArray;
+}
+
+console.log('ESERCIZIO 5', onlyEven(numbers2)) //[8, -12, -2, 0]
+
+
+// 6) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI STRINGHE E RESTITUISCE UNA STRINGA COMPOSTA DALLE INIZIALI
+
+const strings3 = ['pippo', 'osvaldo', 'paperino'];
+
+function sumFirstChar(array){
+
+}
+
+console.log(sumFirstChar(strings3)) //'pop'
+
+
+
+// 7) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI NUMERI E RESTITUISCE IL MAGGIORE
+
+const numbers3 = [-3, 5, 15, -8, 12, 2, 0];
+
+function maxElement(array){
+
+}
+
+console.log(maxElement(numbers3)) //15
 
 
 //-----------   esercizio   ------------------

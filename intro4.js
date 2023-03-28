@@ -199,7 +199,7 @@ console.log(paperino); // 21
 
 //         if(element >= 0){
 //             tempArray.push(element);
-//         }
+//         }    
 //     }
 //     return tempArray;
 // }
@@ -347,7 +347,13 @@ console.log('ESERCIZIO 5', onlyEven(numbers2)) //[8, -12, -2, 0]
 const strings3 = ['pippo', 'osvaldo', 'paperino'];
 
 function sumFirstChar(array){
-
+let tempArray= [];
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        element.charAt(1);
+        tempArray.push();
+    }
+return tempArray;
 }
 
 console.log(sumFirstChar(strings3)) //'pop'

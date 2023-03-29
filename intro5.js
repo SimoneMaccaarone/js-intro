@@ -1,5 +1,6 @@
 //      HIGHER-ORDER FUNCTION funzioni di ordine superiore
 // una funzione puo avere come parametro un altra funzione. funzioni che creano altre funzioni
+// puo avere come parametro o in INPUT o OUTPUT o ENTRAMBE una funzione
 
 let a = 5
 let b = 'ciao'
@@ -203,3 +204,14 @@ let res = words
     .forEach(numberOfChars => console.log(numberOfChars))
 
    console.log([1,2,3,4,5].reduce((n1,n2)=> n1+n2, 0))
+
+//         
+   // --------  APPUNTI --------
+   // Le HIGHER ORDER FUNCTION sono abbastanza strane
+   // La REDUCE è la piu strana in assoluto
+   // esistono molti linguaggi di programmazione che ne fanno tranquillamente a meno
+   // esistono molti programmatori che ne fanno tranquillamente a meno ( anche i programmatori molto bravi)
+   // ogni volta che qualcuno dei ragazzi che lavora con me deve scrivere una reduce non banale e mi chiama per conforto
+   // purtroppo dovete imparare almeno a leggere!!!
+
+   

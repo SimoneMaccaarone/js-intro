@@ -98,8 +98,19 @@ function onlyEven(array) {
     }
     return tempArray;
 }
-
 console.log('ESERCIZIO 5', onlyEven(numbers2)) //[-8, 12, -2, 0]
+//_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+function onlyEven2(array) {
+    numbers2.filter((element)=> element % 2 ===0)
+    return element;
+}
+console.log('ESERCIZIO 5.1', onlyEven2(numbers2)) //[-8, 12, -2, 0]
+
+// numbers.filter((element) => element % 2 === 0)
+
+
 
 
 // 6) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI STRINGHE E RESTITUISCE UNA STRINGA COMPOSTA DALLE INIZIALI

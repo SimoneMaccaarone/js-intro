@@ -343,5 +343,3 @@ for (let i = 0; i < myClass.length; i++) {
 // EMAIL:${superClass.email}`
 //     console.log(description);
 }*/
-
-//----------------------------------------

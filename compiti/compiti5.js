@@ -102,13 +102,13 @@ console.log('ESERCIZIO 5', onlyEven(numbers2)) //[-8, 12, -2, 0]
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 
-function onlyEven2(array) {
-    numbers2.filter((element)=> element % 2 ===0)
-    return element;
-}
-console.log('ESERCIZIO 5.1', onlyEven2(numbers2)) //[-8, 12, -2, 0]
+// function onlyEven2(array) {
+//     numbers2.filter((element)=> element % 2 ===0)
+//     return element;
+// }
+// console.log('ESERCIZIO 5.1', onlyEven2(numbers2)) //[-8, 12, -2, 0]
 
-// numbers.filter((element) => element % 2 === 0)
+// // numbers.filter((element) => element % 2 === 0)
 
 
 
@@ -128,9 +128,18 @@ function sumFirstChar(array) {
 }
 console.log('ESERCIZIO 6', sumFirstChar(strings3)) //'pop'
 
+//_-_-_-_-_-_-_-_-_-_-_-_-    REDUCE  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+function sumFirstChar3(array) {
+    const newArray = array.reduce((previous, current) => {
+        const firstChar = current[0]
+        previous += firstChar;
+        return previous;
+    }, '')
+    return newArray;
+}
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-function sumFirstChar2(array) {
+function sumFirstChar3(array) {
     let tempArray = [];
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
@@ -140,7 +149,7 @@ function sumFirstChar2(array) {
     }
     return tempArray.join('');
 }
-console.log('ESERCIZIO 6.1', sumFirstChar2(strings3)) //'pop'
+console.log('ESERCIZIO 6.1', sumFirstChar3(strings3)) //'pop'
 
 
 // 7) SCRIVERE UNA FUNZIONE CHE PRENDE COME INPUT UN ARRAY DI NUMERI E RESTITUISCE IL MAGGIORE
@@ -170,3 +179,18 @@ function maxElement2(array) {
 }
 
 console.log('ESERCIZIO (math.max) 7.1', maxElement2(numbers3)) //15
+
+//_-_-_-_-_-_-_-_-_-_-_-_-    REDUCE  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+function maxElement3(array) {
+    return array.reduce((previous, current) => {
+        
+        if (previous < current) {
+            return current;
+        }else{
+            return previous;
+        }
+    }, -Infinity);
+}
+console.log('ESERCIZIO .reduce 7.2', maxElement2(numbers3)) //15
+
